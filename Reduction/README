@@ -1,56 +1,6 @@
-This space contains the color to SAT  reduction program, output
-	is dimacs cnf format.
-clr2sat. 
-synopsis:
-	clr2sat file numcolors [contype] [extra [extra]]
-	file is the name of a file containing the graph
-	numcolors is the number of colors that the graph is to be colored
-	by.
-	The remaining arguments may be in any order.
-	contype is the type of conversion:
-
-		"std" -- standard conversion -- 
-		this one uses one clause of size k for each vertex
-		and k 2-clauses for each edge. Note that the resulting
-		truth assignment may have some vertices assigned two or 
-		more colors; if so just choose one.
-		std is the default.
-
-		"log" -- logarithmic conversion
-		use a binary representation for the colors sets.
-		Here vertex v is represented by ceil(lg(k)) variables
-		which represent the colors in binary. binary integers
-		not representing colors are forbidden by a set of clauses
-		that forbid these integers. Edges then are of length
-		2ceil(lg(k)) representing the values that cannot be
-		the same across the edges (negated). 
-
-	extra - each extra may cause some extra clauses to be added.
-
-		"unique" -- add clauses to force a unique color assignment 
-		if satisfiable. In std conversions, for each vertex (k choose
-		2) 2-clauses are added to forbid any pair of variables being
-		true. "log" conversions enforce uniqueness by their nature,
-		so unique is always set for log conversions.
-
-		"break" -- add some unit clauses to break the coloring symmetry
-		by forcing the colors on the first edge encountered.
-		This may help, but notice if the edge is isolated from the
-		rest of the graph it may not help very much. This extra
-		applies to both contypes.
-
-
-graph.c - same as in smallk and other coloring programs.
-
-LIMITATIONS:
-
-The program stores all the literals of the formula in an array,
-with 0's stored to separate clauses. If k is large, and in particular
-if you use the unique option, the number of literals can be quite
-large. If you are experiencing memory problems on larger instances
-change the constant MAXLITERALS in the file clr2sat. in the line
-
-#define MAXLITERALS 100000 // must include 0's to terminate clauses.
-
-to a larger integer (e.g. 1000000 or whatever your system will allow).
-
+This folder contains code for reducing a given graph to CNF formula for soving k-coloring problem.
+Installation: 
+	Run 'make install in the folder form linux.'
+To run the reducer:
+	clr2sat #file #numcolors
+where #file will be the name of the file having the graph instance and the #nucolors is the number of colors to be checked.

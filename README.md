@@ -27,9 +27,9 @@ e v1 v2<br />
   
 This folder contains code for reducing a given graph to CNF formula for soving k-coloring problem.<br />
 Installation: <br />
-	Run 'make install in the folder form linux.'
+	Run 'make install' in the folder in linux directory.
   
 To run the reducer:<br />
-	clr2sat #file #numcolors
+	'clr2sat #file #numcolors'
 
-where #file will be the name of the file having the graph instance and the #nucolors is the number of colors to be checked.
+where #file will be the name of the file having the graph instance and the #numcolors is the number of colors to be checked.

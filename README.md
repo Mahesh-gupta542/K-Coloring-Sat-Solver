@@ -10,26 +10,26 @@ two vertices with an edge.
 
 To run type: 
 
-  gcc random.c
+  gcc random.c <br />  
   a.out #n #p > outputFilename.txt
   
 The outputFilename.txt will have the graph instance in the following format:
 
-p edge #n #p
-e v1 v2
-...
-...
+p edge #n #p<br />
+e v1 v2<br />
+...<br />
+...<br />
 ...
 
 
 
   2. Graph to CNF Converter
   
-This folder contains code for reducing a given graph to CNF formula for soving k-coloring problem.
-Installation: 
+This folder contains code for reducing a given graph to CNF formula for soving k-coloring problem.<br />
+Installation: <br />
 	Run 'make install in the folder form linux.'
   
-To run the reducer:
+To run the reducer:<br />
 	clr2sat #file #numcolors
 
 where #file will be the name of the file having the graph instance and the #nucolors is the number of colors to be checked.

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+n=5
+
+while [ "$n" -lt 26 ]
+do
+    t=1
+    while [ "$t" -lt 11 ]
+    do 
+        name="graph_"$n"_"$t".txt"
+        ./a.out $n $1 > $name
+	t=`expr $t + 1`
+    done
+    n=`expr $n + 1`
+done

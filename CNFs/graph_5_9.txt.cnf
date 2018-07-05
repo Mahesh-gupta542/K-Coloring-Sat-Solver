@@ -1,0 +1,31 @@
+c CNF SAT conversion from Graph Coloring
+c Input File name: graph_5_9.txt
+c Number of Colors  5
+c Conversion type = Standard
+c Conversion Code: S--
+p cnf 25 25
+1 2 3 4 5 0 
+6 7 8 9 10 0 
+11 12 13 14 15 0 
+16 17 18 19 20 0 
+21 22 23 24 25 0 
+-1 -11 0 
+-2 -12 0 
+-3 -13 0 
+-4 -14 0 
+-5 -15 0 
+-1 -16 0 
+-2 -17 0 
+-3 -18 0 
+-4 -19 0 
+-5 -20 0 
+-6 -16 0 
+-7 -17 0 
+-8 -18 0 
+-9 -19 0 
+-10 -20 0 
+-11 -16 0 
+-12 -17 0 
+-13 -18 0 
+-14 -19 0 
+-15 -20 0 
